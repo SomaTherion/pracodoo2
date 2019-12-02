@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="agenda_empresa_action" name="empresa"
+                     res_model="agenda.empresas" />
+
+
+
+
+        <menuitem name="Agenda" id="menu_agenda" sequence="10" />
+        <menuitem name="Inicio" id="menu_inicio" parent="menu_agenda" sequence="10"/>
+        <menuitem name="empresas" id="menu_empresa" action="agenda_empresa_action" parent="menu_inicio" sequence="10"/>
+
+
+        <record id="agenda_empresa_view_tree" model="ir.ui.view">
+            <field name="name">Lista empresas</field>
+            <field name="model">agenda.empresas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="cod" />
+                    <field name="nombre" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="agenda_empresa_view_form" model="ir.ui.view">
+            <field name="name">Formulario de empresas</field>
+            <field name="model">agenda.empresas</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                    <field name="cod" />
+                    <field name="nombre" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="agenda_empresa_view_search" model="ir.ui.view">
+            <field name="name">Busqueda empresas</field>
+            <field name="model">agenda.empresas</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="cod" />
+                    <field name="nombre" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

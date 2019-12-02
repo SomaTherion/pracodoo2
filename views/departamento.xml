@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="agenda_departamento_action" name="departamento"
+                     res_model="agenda.departamentos" />
+
+
+
+
+        <menuitem name="departamentos" id="menu_departamentos" action="agenda_departamento_action" parent="menu_inicio" sequence="10"/>
+
+
+        <record id="agenda_departamento_view_tree" model="ir.ui.view">
+            <field name="name">Lista departamentos</field>
+            <field name="model">agenda.departamentos</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="cod" />
+                    <field name="nombre" />
+                    <field name="empresa" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="agenda_departamento_view_form" model="ir.ui.view">
+            <field name="name">Formulario de departamentos</field>
+            <field name="model">agenda.departamentos</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                    <field name="cod" />
+                    <field name="nombre" />
+                    <field name="empresa" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="agenda_departamento_view_search" model="ir.ui.view">
+            <field name="name">Busqueda departamentos</field>
+            <field name="model">agenda.departamentos</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="cod" />
+                    <field name="nombre" />
+                    <field name="empresa" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>
