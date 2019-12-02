@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="agenda_empleado_action" name="empleado"
+                     res_model="agenda.empleados" />
+
+
+
+
+        <menuitem name="empleados" id="menu_empleados" action="agenda_empleado_action" parent="menu_inicio" sequence="10"/>
+
+
+        <record id="agenda_empleado_view_tree" model="ir.ui.view">
+            <field name="name">Lista empleados</field>
+            <field name="model">agenda.empleados</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="dni" />
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="provincia" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="agenda_empleado_view_form" model="ir.ui.view">
+            <field name="name">Formulario de empleados</field>
+            <field name="model">agenda.empleados</field>
+            <field name="arch" type="xml">
+                <form>
+                      <header>
+                        <button name="limpiar" type="object" string="Limpia" class="oe_highlight" />
+                        <button name="limpia_todo" type="object" string="Limpia todo" class="oe_highlight" />
+                         <button name="render_html" type="object" string="kkkkl" class="oe_highlight" />
+                    </header>
+
+                    <group>
+                    <field name="dni" />
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="provincia" />
+
+
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="agenda_empleado_view_search" model="ir.ui.view">
+            <field name="name">Busqueda empleados</field>
+            <field name="model">agenda.empleados</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="dni" />
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="provincia" />
+
+
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>
