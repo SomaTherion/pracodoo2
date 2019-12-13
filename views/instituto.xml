@@ -8,8 +8,8 @@
 
 
         <menuitem name="Agenda" id="menu_agenda" sequence="10" />
-        <menuitem name="Instituto" id="menu_inicio_insitutos" parent="menu_agenda" sequence="10"/>
-        <menuitem name="institutos" id="menu_instituto" action="agenda_instituto_action" parent="menuu_inicio_insitutos" sequence="10"/>
+        <menuitem name="Gestion Alumnos" id="menu_inicio_insitutos" parent="menu_agenda" sequence="10"/>
+        <menuitem name="institutos" id="menu_instituto" action="agenda_instituto_action" parent="menu_inicio_insitutos" sequence="10"/>
 
 
         <record id="agenda_instituto_view_tree" model="ir.ui.view">

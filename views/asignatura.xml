@@ -7,7 +7,7 @@
 
 
 
-        <menuitem name="asignaturas" id="menu_asignaturas" action="agenda_asignatura_action" parent="menu_instituto" sequence="10"/>
+        <menuitem name="asignaturas" id="menu_asignaturas" action="agenda_asignatura_action" parent="menu_inicio_insitutos" sequence="10"/>
 
 
         <record id="agenda_asignatura_view_tree" model="ir.ui.view">
