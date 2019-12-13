@@ -1,7 +1,7 @@
 
 from odoo import models, fields, api
 
-class Empresas(models.Model):Instituto
+class Instituto(models.Model):
     _name = 'agenda.institutos'
     cod = fields.Char('cod', required=True)
     nombre = fields.Char('Nombre del instituto', required=True)
