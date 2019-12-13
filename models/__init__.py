@@ -1,1 +1,1 @@
-from . import empresas, departamentos, empleados
+from . import empresas, departamentos, empleados, institutos, asignaturas, alumnos
